@@ -1,0 +1,20 @@
+// IE Hacks Settings ------------------------------------
+// .ie.ie7,
+// .ie.ie8 {
+	
+// }
+
+// .ie.ie7 {
+	
+// }
+.ie {
+	.header-nav-main .logo a img {
+		width: auto!important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.header-nav-main .logo a img {
+		width: auto!important;
+	}
+}

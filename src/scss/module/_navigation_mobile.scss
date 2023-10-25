@@ -1,0 +1,166 @@
+/* Navigation Mobile Settings ------------------------------------ */
+//* Layout Mobile (Original) ----------------------------------- */
+.menu-toggle {
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	@include pad {
+		top: 15px;
+	}
+	@include desktop-991 {
+		display: none;
+	}
+}
+#menu-toggle-btn {
+	display: block;
+	width: 24px;
+	height: 36px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999999999;
+	overflow: hidden;
+	cursor: pointer;
+	&::before,
+	&::after,
+	span {
+		background: $a-color;
+		content: '';
+		display: block;
+		width: 20px;
+		height: 5px;
+		position: absolute;
+		left: 0;
+		transition: none 0.4s ease 0.4s;
+		transition-property: transform, top, bottom, left, opacity;
+	}
+	&::before {
+		top: 5px;
+	}
+	&::after {
+		bottom: 5px;
+	}
+	span {
+		top: 50%;
+		margin-top: -3px;
+	}
+}
+html.mm-opening #menu-toggle-btn {
+	overflow: hidden;
+	&::before {
+		transform: rotate( 45deg );
+		top: 15px;
+	}
+	&::after {
+		transform: rotate( -45deg );
+		bottom: 15px;
+	}
+	span {
+		left: -50px;
+		opacity: 0;
+	}
+}
+#menu {
+	background: #333;
+	.mm-panel {
+		padding: 0 0 0 20px;
+		> ul {
+		@extend %clearfix;
+    	@extend %w-100;
+    	@extend %float-l;
+	    	> li {
+	    		@extend %trans-all-02;
+	    		@extend %w-100;
+	    		@extend %float-l;
+	    		line-height: 2em;
+	    		border-top: 1px solid #444;
+	    		border-bottom: 1px solid #222;
+	    		> a {
+	    			@include single-text-shadow;
+	    			@extend %trans-all-02;
+	    			color: #eee;
+	    			font-size: 16px;
+	    			letter-spacing: 1px;
+	    			padding: .7em 0 .7em 1em;
+	    			display: block;
+	    			i {
+	    				margin-right: .7em;
+	    			}
+	    			&.mm-subopen {
+	    				padding: 0;
+	    			}
+	    		}
+	    		&:hover {
+	    			background: #222;
+	    			border-left: 4px solid $a-color;
+	    			a {
+	    				color: #ddd;
+	    			}
+	    		}
+	    		&:active {
+	    			background: #222;
+	    			border-left: 4px solid $a-color-hover;
+	    			>a {
+	    				color: #ccc;
+	    			}
+	    			>a.mm-subopen {
+	    				position: absolute;
+	    				top: 0;
+	    			}
+	    		}
+	    		&.location > a > i {
+					margin-left: 4px;
+					margin-right: 13px;
+	    		}
+	    		&.mmenu-lang {
+	    			margin-top: 25px;
+	    		}
+	    	}
+	    }
+    }
+    .mm-header {
+		color: #ccc!important;
+		font-size: 16px;
+		.mm-title {
+			color: #eee;
+		}
+	}
+	.mm-footer {
+		color: #999;
+		letter-spacing: 1px;
+		font: {
+			family: 'Roboto';
+			style: normal;
+			size: 12px;
+			weight: 300;
+		}
+	}
+}
+.mm-header {
+	.mm-prev, .mm-next {
+		padding-top: 20px!important;
+	}
+}
+.mm-menu.mm-hassearch .mm-header {
+	.mm-title, .mm-prev, .mm-next {
+		padding-top: 10px!important;
+	}
+}
+.mm-menu .mm-list > li > a.mm-subopen:after, .mm-menu .mm-list > li > a.mm-subclose:before {
+	border-color: #ccc!important;
+}
+.mm-menu .mm-header .mm-prev:before, .mm-menu .mm-header .mm-next:after {
+	border-color: #ccc!important;
+}
+#mm-blocker {
+	@include animation (.3s, .7s, fadeIn, both, inherit);
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+}

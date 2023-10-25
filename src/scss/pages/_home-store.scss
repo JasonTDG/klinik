@@ -1,0 +1,38 @@
+//Home, Index's store
+
+.Home-store{
+	margin-bottom: 35px;
+	.store-box{
+		display: inline-block;
+		background-color: #f7f7f7;
+		padding: 45px 15px;
+		width:24%;
+		margin: 0px auto;
+		@include padBelow{
+			margin-bottom: 15px;
+			width: 49%;
+		}
+	}
+	.store-name{
+		h2{
+			font-size: 18px;
+		    font-weight: 400;
+		    margin: 0px;
+		    color: #616161;
+		    margin-top: 10px;
+		}
+		
+	}
+	.store-img{
+		overflow: hidden;
+		img{
+			width: 128px;
+			height:auto;
+		}
+		
+	}
+}
+
+
+// if not just one store
+.OverOne{}

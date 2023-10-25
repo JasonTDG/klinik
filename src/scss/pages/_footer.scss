@@ -1,0 +1,38 @@
+// Footer
+footer {
+	@extend %clearfix;
+	@extend %w-100;
+	background: #333;
+	p.copyright {
+		font-size: 14px;
+		color: #999;
+		text-align: left;
+		margin: 0;
+		padding: 1em 0;
+	}
+	.copyright-links {
+		@extend %float-l;
+		margin-bottom: 20px;
+		@include desktop-991 {
+			float: right;
+			text-align: right;
+			padding: 0 15px 0 0;
+			margin-bottom: 0;
+		}
+		a {
+			@extend %dis-inb;
+			color: #777;
+			text-align: right;
+			margin: 0;
+			@include desktop-991 {
+				padding: 1em 0;
+			}
+			&:hover {
+				color: #999;
+			}
+			&:active {
+				color: #888;
+			}
+		}
+	}
+}

@@ -1,0 +1,158 @@
+//Page - Contact Us
+.contactus.contactus-form {
+	@extend %submit-area;
+	margin: 0 0 30px 0;
+	> .container {
+		padding-bottom: 30px;
+		border-bottom: 1px solid $brand-color;	
+	}
+	#contact-form {
+		@extend %clearfix;
+		@extend %w-100;
+		float: none;
+		margin: 0 auto;
+		padding: 30px 0 0;
+		border-top: 1px dashed #ccc;
+	}
+	.text-fields, .submit-area {
+		@extend %clearfix;
+		@extend %w-100;
+	}
+	.text-fields {
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px dashed #ccc;
+	}
+	.float-input {
+		@extend %clearfix;
+		@extend %w-100;
+		@extend %float-l;
+		@extend %verifynumber-area;
+		margin-bottom: 15px;
+		position: relative;
+		label {
+			@extend %dis-bk;
+		}
+		input, textarea {
+			@extend %form-input-basic;
+			width: 79.73856%;
+			margin-left: 50px;
+			@include phone-360 {
+				width: 85.00654%;
+			}
+			@include phone-480 {
+				width: 85.00654%;
+			}
+			@include phone-640 {
+				width: 90.00654%;
+			}
+			@include pad {
+				width: 92.00654%;
+			}
+			@include desktop-1199 {
+				width: 95.00654%;
+			}
+		}
+		input[type="text"]:focus + span i,
+		input[type="email"]:focus + span i,
+		input[type="tel"]:focus + span i,
+		textarea:focus + span i {
+			color: $brand-color;
+		}
+		input#verifynumber {
+			@extend %float-l;
+			width: 15.03268%;
+			min-width: 75px;
+			margin-right: .5em;
+		}
+		textarea {
+			height: 100px;
+		}
+		span {
+			@extend %float-l;
+			@extend %trans-eio-03;
+			@extend %dis-inb;
+			width: 15.03268%;
+			height: 40px;
+			margin-right: 1.96078%;
+			text-align: center;
+			position: absolute;
+			left: 0;
+			@include phone-360 {
+				width: 13.03268%;
+			}
+			@include phone-480 {
+				width: 13.03268%;
+			}
+			@include phone-640 {
+				width: 8.03268%;
+			}
+			@include pad {
+				width: 6.03268%;
+			}
+			@include desktop-1199 {
+				width: 4.03268%;
+				margin-right: 10px;
+			}
+			i {
+				@extend %trans-eio-03;
+				position: absolute;
+				top: 13px;
+				left: 13px;
+				font-size: 18px;
+				&.fa-mobile {
+					font-size: 26px;
+					top: 10px;
+					left: 14px;
+				}
+			}
+		}
+		&:last-child span {
+			width: 18.53268%;
+			@include phone-360 {
+				width: 13.03268%;
+			}
+			@include phone-480 {
+				width: 13.03268%;
+			}
+			@include phone-640 {
+				width: 8.03268%;
+			}
+			@include pad {
+				width: 6.03268%;
+			}
+			@include desktop-1199 {
+				width: 4.03268%;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.page-content-section.contactus.contact-info {
+	margin-bottom: 30px;
+	.contact-info-datalist {
+		@extend %clearfix;
+		.data-links {
+			@extend %contact-details;
+			li:last-child {
+				border-bottom: 1px dashed #ddd;
+			}
+		}
+		.social-links {
+			@extend %social-links;
+			margin: 20px 0 30px 0;
+			li a {
+				border: 1px solid $a-color;
+			}
+			li a i {
+				color: $a-color;
+			}
+		}
+	}
+	.contact-info-map {
+		@extend %clearfix;
+		@extend %google-map;
+		min-height: 350px;
+	}
+}

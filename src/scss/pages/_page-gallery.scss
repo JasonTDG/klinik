@@ -1,0 +1,167 @@
+//Page - gallery
+.page-gallery {
+	padding: 30px 0;
+	.gallery-list {
+    .gallery-item {
+      position: relative;
+      max-width: 400px;
+      right: 0;
+      margin: 0 auto;
+      * {
+        box-sizing: border-box;
+        @include transition(all .2s ease-in-out);
+      }
+      @include phone-480 {
+        max-width: 50%;
+        right: auto;
+        margin: 0;
+      }
+      @include desktop-991 {
+        max-width: 33.333333%;
+      }
+      // gallery list page
+      &.gallery-list-item {
+        position: relative;
+        padding: 10px;
+        a {
+          position: relative;
+          display: inline-block;
+          color: #fff;
+          background: #001221;
+          box-shadow: 0 4px 25px 1.35px rgba(#000, .25);
+          overflow: hidden;
+          @include transform(translate(0, 0));
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 100%;
+            background-color: rgba(0,62,115,0.8);
+            z-index: 1;
+            @include transition(all .2s ease-in-out);
+            @include transition-delay(0.05s);
+          }
+        }
+        img {
+          max-width: 100%;
+          position: relative;
+          opacity: 0.8;
+        }
+        figcaption {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          z-index: 1;
+          @include transform(translate(0, 0));
+        }
+        h3.gallery-title {
+          position: relative;
+          font-size: 20px;
+          font-weight: 700;
+          padding: 15px 0;
+          margin: 0 15px 10px;
+          text-shadow: 0 0 10px rgba(#000, 0.8);
+          @include transform(translate(0, 0));
+        }
+        .gallery-view {
+          position: absolute;
+          display: block;
+          color: #fff;
+          font-size: 16px;
+          bottom: 0;
+          left: 0;
+          padding: 10px 15px;
+          width: 100%;
+          @include transform(translate(0, 100%));
+          &:after {
+            font-family: 'FontAwesome';
+            font-size: 14px;
+            content: '\f178';
+            position: relative;
+            margin-left: 5px;
+          }
+        }
+        &:hover, &:focus {
+          a {
+            box-shadow: 0 12px 15px 1.35px rgba(0,0,0,0.25);
+            @include transform(translate(0, -10px));
+            &:before {
+              top: 60%;
+              @include transition-delay(0s);
+            }
+          }
+          img {
+            opacity: 1;
+            @include transition(all .2s ease-in-out);
+          }
+          figcaption {
+            @include transform(translate(0, 0));
+          }
+          h3.gallery-title {
+            @include transform(translate(0, -30px));
+          }
+          .gallery-view {
+            @include transform(translate(0, 0));
+          }
+        }
+      }
+      &.gallery-content-item {
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        text-align: center;
+        background: rgba(0,62,115,0.8);
+        *, &:before, &:after {
+          box-sizing: border-box;
+          @extend %trans-eio-03;
+        }
+        img {
+          // width: calc(120%);
+          backface-visibility: hidden;
+          vertical-align: top;
+        }
+        figcaption {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          @include transform(translateY(-25%));
+          padding: 5px 40px;
+          opacity: 0;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          text-align: center;
+          text-shadow: 2px 2px 8px #000;
+        }
+        i {
+          position: absolute;
+          color: $brand-color;
+          font-size: 26px;
+          line-height: 55px;
+          width: 55px;
+          bottom: 0;
+          right: 0;
+          background-color: #fefefe;
+          @include transform(translateX(55px));
+        }
+        &:hover, &:focus {
+          img {
+            zoom: 1;
+            @include opacity(0.05);
+            // @include transform(translateX(-40px));
+          }
+          figcaption {
+            @include transform(translateY(-50%));
+            opacity: 1;
+          }
+          i {
+            @include transform(translateX(0));
+          }
+        }
+      }
+    }
+  }
+}

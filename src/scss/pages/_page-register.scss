@@ -1,0 +1,96 @@
+//Page - Register
+.member-register {
+	.register-rules-title, .register-rules, .register-btn {
+		width: 90%;
+		float: none;
+	}
+	.register-rules-title {
+		@extend %font-icon;
+		margin: 2em auto;
+	}
+	.register-rules {
+		@extend %clearfix;
+		@extend %dis-bk;
+		@extend %trans-all-02;
+		@include border-radius(5px);
+		height: 400px;
+		background: #f5f5f5;
+		padding: 1em;
+		margin: 0 auto;
+		overflow-y: scroll;
+		line-height: 1.5em;
+		ul {
+			padding-left: 2.5em;
+			@extend %clearfix;
+			> li {
+				list-style-type: disc;
+				> span {
+					color: $alert;
+					font-weight: bold;
+				}
+			}
+		}
+		ol {
+			padding-left: 2.5em;
+			float: left;
+			@extend %clearfix;
+			> li {
+				list-style-type: decimal;
+				> ol {
+					padding-left: 2em;
+					margin-top: .5em;
+					> li {
+						list-style-type: lower-roman;
+					}
+				}
+				> span {
+					color: $alert;
+					font-weight: bold;
+				}
+			}
+			&.alpha {
+				> li {
+					list-style-type: upper-alpha;
+					> ol {
+						padding-left: 2em;
+						margin-top: .5em;
+						> li {
+							list-style-type: upper-roman;
+						}
+					}
+				}
+			}
+		}
+		ul > li, ol > li, ol > li > ol > li {
+			margin-bottom: .3em;
+		}
+		p {
+			font-size: 14px;
+			padding-left: 1em;
+			margin-bottom: .5em;
+		}
+	}
+	.register-btn {
+		@extend %submit-area;
+		margin: 2em auto;
+	}
+	.register-agree {
+		@extend %w-100;
+		@extend %float-l;
+		input {
+			margin-right: .5em;
+			cursor: pointer;
+		}
+		label {
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+	.submit-area {
+		@extend %w-100;
+		@extend %float-r;
+		margin: 1em 0;
+		text-align: right!important;
+	}
+}

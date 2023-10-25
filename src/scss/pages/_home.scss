@@ -1,0 +1,286 @@
+//Home, Index
+.home-content-section {
+	@extend %clearfix;
+	@extend %w-100;
+	padding: 20px 0;
+	text-align: center;
+	.section-title-group {
+		@extend %clearfix;
+		@extend %w-100;
+		text-align: center;
+		overflow: hidden;
+	}
+	h1 {
+		@extend %dis-inb;
+		@extend %trans-all-02;
+		@extend %title-mid-line;
+		margin-bottom: 20px;
+		&:hover {
+			color: $brand-color;
+		}
+		span:before, span:after {
+			@include phone-480 {
+				width: 4em;
+			}
+			@include pad {
+				width: 8em;
+			}
+			@include desktop-991 {
+				width: 10em;
+			}
+			@include desktop-1199 {
+				width: 12em;
+			}
+		}
+	}
+	p {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&.hotproducts-carousel {
+		padding-top: 0;
+	}
+}
+.home-content-section.hotnews {
+	background-color: transparent;
+	background: url('../images/common/bg-parallax01.jpg') 50% 50% no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	a.news-link {
+		@extend %clearfix;
+		@extend %dis-inb;
+		@extend %trans-eio-03;
+		@include border-radius(2px);
+		@include transform(translateY(0));
+		background: #fff;
+		padding: 15px;
+		margin-bottom: 15px;
+		border: 1px solid #f3f3f3;
+		@include pad {
+			margin-bottom: 0;
+		}
+		.news-img {
+			@extend %dis-bk;
+			margin: 0 auto 15px auto;
+		}
+		.news-txtblock {
+			@extend %clearfix;
+			width: 90%;
+			margin: 0 auto;
+			h6 {
+				padding-bottom: 10px;
+				margin-bottom: 15px;
+				border-bottom: 1px solid #eee;
+			}
+			p {
+				@extend %w-100;
+				@extend %dis-inb;
+				@extend %trans-eio-03;
+				max-height: 145px;
+				overflow: hidden;
+				color: #666;
+				font-size: 0.9rem;
+				text-align: justify;
+				@include pad {
+					text-align: left;
+				}
+				&.news-date {
+					color: $news-date;
+					font-weight: 400;
+					margin-bottom: 5px;
+					text-align: center;
+				}
+			}
+		}
+		.news-more {
+			@extend %clearfix;
+			@extend %dis-inb;
+			@extend %trans-eio-03;
+			@include border-radius(3px);
+			padding: 4px 20px;
+			font-size: .9rem;
+			font-weight: bold;
+			letter-spacing: 1px;
+			color: $a-color;
+			border: 1px solid $a-color;
+			background: transparent;
+		}
+		&:hover, &:active, &:focus {
+			@include box-shadow(0px 0px 6px rgba(0, 0, 0, 0.1));
+		}
+		&:hover {
+			border-color: #ddd;
+			margin-top: -5px;
+			.news-txtblock p {
+				color: #444;
+			}
+			.news-more {
+				color: #fff;
+				background: $a-color-hover;
+				border-color: $a-color-hover;
+			}
+		}
+		&:active {
+			margin-top: -2px;
+			.news-txtblock p {
+				color: #222;
+			}
+			.news-more {
+				color: #fff;
+				background: $a-color-active;
+				border-color: $a-color-active;
+			}
+		}
+	}
+}
+.home-content-section.contact-map {
+	.google-maps {
+		@extend %google-map;
+		min-height: 300px;
+	}
+}
+.home-content-section.contact-sitemap {
+	background: $brand-color;
+	.contact-sitemap-info {
+		@extend %clearfix;
+		@extend %w-100;
+		text-align: left;
+		margin-bottom: 20px;
+		@include desktop-991 {
+			margin-bottom: 0;
+		}
+		h6 {
+			@extend %font-icon;
+			color: #eee;
+			padding-bottom: 15px;
+			border-bottom: 1px solid $a-color-hover;
+			margin-bottom: 20px;
+		}
+		p {
+			color: #eee;
+			font-size: 14px;
+			text-align: left;
+		}
+	}
+	ul.contact-details {
+		@extend %clearfix;
+		@extend %w-100;
+		margin-bottom: 20px;
+		li {
+			@extend %clearfix;
+			@extend %w-100;
+			@extend %font-icon;
+			color: $Fenlv;
+			margin-bottom: 10px;
+			@include pad {
+				margin-bottom: 0;
+			}
+			i, p {
+				@extend %float-l;
+				font-size: 14px;
+			}
+			i {
+				width: 18px;
+				margin-top: 4px;
+				color: $a-color-hover;
+				&.fa-map-marker,
+				&.fa-mobile {
+					padding-left: 3px;
+				}
+				&.fa-phone {
+					font-size: 15px;
+				}
+				&.fa-mobile {
+					font-size: 18px;
+					margin-right: 7px;
+				}
+			}
+			p {
+				margin-bottom: 0;
+				color: $Fenlv;
+			}
+			a {
+				color: $Fenlv;
+				font-size: 14px;
+				text-align: left;
+				&:hover {
+					color: #fff;
+				}
+				&:active {
+					@extend %active;
+					color: #eee;
+				}
+			}
+		}
+	}
+	ul.social-links {
+		@extend %social-links;
+	}
+	.fb-area {
+		@extend %float-l;
+		@include desktop-991 {
+			float: right;
+			padding: 0;
+			margin-right: -15px;
+		}
+		.contact-sitemap-fb {
+			width: 230px;
+			margin-top: 10px;
+			overflow: auto;
+			@include phone-360 {
+				width: 260px;
+			}
+			@include phone-400 {
+				width: 280px;
+			}
+			@include phone-480 {
+				width: 360px;
+			}
+			@include phone-540 {
+				width: 420px;
+			}
+			@include phone-640 {
+				width: auto;
+			}
+			.fb-page {
+				// width: 100%!important;
+				max-width: 500px!important;
+			}
+			iframe {
+				// width: 100%!important;
+				height: auto;
+				min-height: 260px;
+				span, a {
+					color: #fff!important;
+				}
+			}
+		}
+	}
+}
+
+
+#myCarousel .YoutubeVideo{
+	display: none;
+	@include desktop-991{
+		display: block;
+		width: 33%;
+		position: absolute;
+		z-index: 998;
+		right: 11%;
+		top: 16%;
+		border: 5px solid #018e2e;
+	}
+}
+
+#mobileCarousel .YoutubeVideo{
+	width: 90%;
+    position: absolute;
+    z-index: 998;
+    right: 6%;
+    top: 41.5%;
+    border: 5px solid #018e2e;
+    display: block;
+	@include desktop-991{
+		display: none;
+	}
+}

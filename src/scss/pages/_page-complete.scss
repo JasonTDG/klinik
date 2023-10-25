@@ -1,0 +1,33 @@
+//Page - Complete
+.complete {
+	@extend %accordion;
+	.title-process .shopping-step.step4:after {
+		@extend %dis-bk;
+	}
+	.title-order-number {
+		@extend %font-icon;
+		background: #f5f5f5;
+		margin-bottom: 25px;
+		padding: 10px 0 10px 35px;
+	}
+	.order-message {
+		margin-bottom: 50px;
+		padding-left: 35px;
+		span {
+			color: $brand-color;
+			margin: 0 5px;
+		}
+	}
+	.confirm-form {
+		border: none;
+	}
+	.btn-process:last-child {
+		margin-right: 10px;
+	}
+	@include pad {
+		.confirm-form .order-data > label,
+		.confirm-form .confirm-data > label {
+			padding-top: 0;
+		}
+	}
+}

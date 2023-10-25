@@ -1,0 +1,71 @@
+//Page - Order Record
+.order-record {
+	@extend %submit-area;
+	.order-record-title {
+		@extend %font-icon;
+		margin: 2em auto;
+		line-height: 1.5em;
+		> span {
+			color: $alert;
+			margin: 0 5px;
+		}
+	}
+	.table {
+		font-size: 14px;
+		margin-bottom: 0;
+		@include pad {
+			font-size: 16px;
+			margin-bottom: 4em;
+			&.modal-table {
+				margin-bottom: 2em;
+			}
+		}
+		th {
+			border: none;
+			padding: 15px 8px;
+		}
+		td {
+			text-align: center;
+			border: none;
+			padding: 12px 8px;
+			.new-order {
+				color: $alert;
+				font-weight: bold;
+			}
+		}
+	}
+	.submit-area {
+		@extend %w-100;
+		@extend %float-r;
+		@extend %btn-sendform-back;
+		margin: 1em 0;
+		text-align: right!important;
+		.btn-sendform {
+			width: 48%;
+			margin-bottom: 20px;
+			&.btn-back {
+				@extend %w-100;
+				@include pad {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+.btn-order-details {
+	@extend %btn-ghost;
+	@extend %trans-eio-03;
+	padding: 5px 10px;
+	@include pad {
+		padding: 5px 16px;
+		font-size: 16px;
+	}
+}
+
+.btn-close-details {
+	@extend %btn-square;
+	@extend %trans-eio-03;
+	padding: 5px 16px;
+	font-size: 16px;
+}

@@ -1,0 +1,75 @@
+// Table
+$pinned-width: 128px;
+
+table {
+	@extend %p-content;
+	&.responsive th,
+	&.responsive td {
+		position: relative;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&.responsive {
+		th:first-child,
+		td:first-child,
+		&.pinned td {
+			@extend %trans-all-02;
+			display: none;
+			opacity: 0;
+			@include pad {
+				display: table-cell;
+				opacity: 1;
+			}
+		}
+	}
+	th, td {
+		vertical-align: middle!important;
+	}
+	.th-title {
+		text-align: center;
+		background: #666;
+		color: #fff;
+	}
+}
+
+.pinned {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #eee;
+	color: #333;
+	width: ($pinned-width)+2px;
+	overflow: hidden;
+	overflow-x: scroll;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	table {
+		border-right: none;
+		border-left: none;
+		width: $pinned-width;
+	}
+	table th, .pinned table td {
+		white-space: nowrap;
+	}
+	td:last-child {
+		border-bottom: 0;
+	}
+}
+	
+.table-wrapper {
+	position: relative;
+	margin-bottom: 3em;
+	overflow: hidden;
+	// border-right: 1px solid #ccc;
+	.scrollable {
+		margin-left: $pinned-width;
+	}
+	.scrollable {
+		overflow: scroll;
+		overflow-y: hidden;
+	}
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #f5f5f5;
+}

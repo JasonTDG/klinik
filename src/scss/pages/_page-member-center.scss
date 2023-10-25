@@ -1,0 +1,60 @@
+//Page - Member Center
+.member-center {
+	.panel-section {
+		@extend %p-content;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		&.logout {
+			text-align: right;
+		}
+		h6 {
+			padding-left: 15px;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px dashed #ccc;
+			color: $brand-color;
+			@extend %font-icon;
+			i {
+				font-size: 18px;
+			}
+		}
+	}
+	.panel {
+		border-color: #eee;
+	}
+	.panel-heading {
+		background: #666;
+		padding: 15px;
+	}
+	.panel-title {
+		color: #fff;
+		i {
+			margin-right: 1em;
+		}
+	}
+	.panel-body {
+		padding: 25px 15px;
+		ul {
+			@extend %clearfix;
+			// max-width: 1045px;
+			margin: 0 auto;
+			text-align: center;
+			li {
+				@extend %dis-inb;
+				// @extend %float-l;
+				margin-right: .5em;
+				margin-bottom: .5em;
+			}
+		}
+	}
+	.btn-members {
+		@extend %btn-ghost;
+		padding: 6px 18px;
+		font-size: 16px;
+	}
+	.btn-members-logout {
+		@extend %btn-square;
+		padding: 6px 18px;
+		font-size: 16px;
+	}
+}

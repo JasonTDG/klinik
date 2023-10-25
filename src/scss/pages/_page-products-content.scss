@@ -1,0 +1,266 @@
+//Page - Products Content
+.products-content {
+	margin: 30px 0;
+}
+.relproducts-carousel {
+	margin-bottom: 40px;
+}
+.products-gallery {
+	@extend %clearfix;
+	.slides {
+		position: relative;
+		.icon-magnifier {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			z-index: 9;
+			i {
+				font-size: 28px;
+				color: rgba(0, 0, 0, .4);
+			}
+		}
+	}
+}
+.products-specs {
+	@extend %clearfix;
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 30px;
+	@include desktop-991 {
+		border-bottom: none;
+	}
+	.products-specs-lists {
+		@extend %clearfix;
+		padding-left: 0;
+		@include desktop-991 {
+			padding-left: 20px;
+		}
+		h2, h4, p {
+			@extend %w-100;
+			@extend %dis-inb;
+			@extend %float-l;
+		}
+		h2 {
+			padding-bottom: 15px;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #ddd;
+			span {
+				font-size: 14px;
+				font-weight: normal;
+				color: #999;
+			}
+		}
+		.specs-lists-price {
+			@extend %w-100;
+			@extend %clearfix;
+			margin: 15px 0 20px 0;
+			del {
+				@extend %w-100;
+				@extend %float-l;
+				color: #bbb;
+				font-size: 14px;
+				font-weight: normal;
+			}
+			ins {
+				@extend %w-100;
+				@extend %float-l;
+				@extend %tdeco-none;
+				color: $brand-color;
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+		.specs-lists-buttons {
+			@extend %w-100;
+			@extend %float-l;
+			@extend %clearfix;
+			margin: 15px 0;
+			.specs-addtocart-btn {
+				margin-right: 15px;
+				float: initial;
+			}
+			.specs-addtocart-btn,
+			.input-text.qty {
+				@extend %float-l;
+			}
+			.specs-addtocart-btn.disabled {
+				 background: #333;
+				 cursor: default;
+				 &:active {
+				 	top: 0;
+				 }
+			}
+			.specs-options {
+				padding: 5px;
+				margin: 0 5px 10px 0;
+				option {
+					padding: 5px;
+				}
+			}
+			.specs-quantity {
+				@extend %clearfix;
+				@extend %w-100;
+				@extend %float-l;
+				// margin-top: 20px;
+				width: 50px;
+				@include phone-400 {
+					width: 50px;
+					margin-top: 0;
+				}
+				.calculate {
+					width: 30px;
+					height: 36px;
+				}
+				.text_box {
+					width: 40px;
+					height: 36px;
+					text-align: center;
+				}
+				.quantity-remain {
+					margin-left: 10px;
+					font-size: 16px;
+					color: $brand-color;
+				}
+			}
+			ul {
+				@extend %clearfix;
+				@extend %w-100;
+				li {
+					@extend %dis-inb;
+					@extend %float-l;
+					margin-bottom: 15px;
+					&:last-child {
+						img {
+							height: 40px!important;
+						}
+					}
+					a.btn_square-round {
+						@extend %btn-square-round;
+						@extend %btn-square-round-social;
+					}
+					.tooltip > .tooltip-inner {
+						font-size: 14px;
+						padding: 8px 15px;
+					}
+				}
+			}
+		}
+		.specs-lists-tags {
+			@extend %w-100;
+			@extend %float-l;
+			@extend %clearfix;
+			.tags {
+				@extend %dis-inb;
+				> a:hover, > a:active {
+				}
+				> a:active {
+					@extend %active;
+				}
+			}
+		}
+	}
+}
+.products-intro {
+	@extend %w-100;
+	@extend %clearfix;
+	@extend %float-l;
+	margin: 30px 0;
+	ul.nav-tabs li {
+		width: 100%;
+		@include phone-540 {
+			width: auto;
+		}
+		> a {
+			@include border-top-radius(5px);
+			@extend %font-icon;
+			color: #333;
+			font-size: 16px;
+			padding: 10px 16px;
+		}
+		&.active > a {
+			background: $brand-color;
+			color: #fff;
+			@include phone-540 {
+				background: #fff;
+				color: $brand-color;
+				border-top: 2px solid $brand-color;
+				padding: 10px 20px;
+			}
+		}
+	}
+	.tab-content {
+		@extend %clearfix;
+		> .tab-pane {
+			@extend %clearfix;
+			padding: 30px 15px;
+			.tab-pane-row {
+				@extend %clearfix;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+				border-bottom: 1px dashed #ccc;
+				@include desktop-991 {
+					padding-bottom: 25px;
+					margin-bottom: 25px;
+					&:nth-child(even) .tab-pane-text {
+						float: right;
+					}
+				}
+				table tr {
+					@extend %trans-all-02;
+				}
+			}
+			.tab-pane-text {
+				display: table;
+				margin-bottom: 20px;
+				padding: 0;
+				@include desktop-991 {
+					padding-left: 15px;
+					padding-right: 15px;
+					margin-bottom: 0;
+				}
+				.tab-pane-text-wrapper {
+					@extend %p-content;
+					display: table-cell;
+					vertical-align: middle;
+				}
+				h2 {
+					margin: 0 0 25px 0;
+				}
+			}
+			.tab-pane-img {
+				text-align: center;
+				padding: 0;
+				@include desktop-991 {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+			.tab-pane-specs {
+				ul li {
+					font-size: 16px;
+					list-style-type: disc;
+					list-style-position: inside;
+				}
+				table {
+					margin: 15px 0;
+				}
+				table td.specs-title {
+					width: 160px;
+				}
+				.table > tbody > tr > td {
+					@extend %p-content;
+					padding: 15px;
+				}
+			}
+			.tab-pane-specs-wrapper {
+				@extend %clearfix;
+				padding-bottom: 25px;
+				margin-bottom: 25px;
+				border-bottom: 1px solid #ccc;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}

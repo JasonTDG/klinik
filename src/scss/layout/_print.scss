@@ -1,0 +1,20 @@
+//* Printing Settings ------------------------------------ */
+@media print {
+	.header-nav,
+	.page-banner,
+	.specs-lists-buttons,
+	.copyright-links,
+	#back-top,
+	#preloader,
+	.icon-magnifier,
+	.owl-controls,
+	.flex-direction-nav {
+		display: none!important;
+	}
+	footer .col-md-9 {
+		width: 100%!important;
+	}
+	footer p.copyright {
+		text-align: center!important;
+	}
+}

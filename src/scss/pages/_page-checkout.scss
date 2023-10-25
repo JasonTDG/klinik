@@ -1,0 +1,249 @@
+//Page - Checkout
+.checkout-lists {
+	@extend %checkout-postage;
+	margin: 30px 0;
+	.checkout-form {
+		@extend %clearfix;
+		overflow-x: auto;
+	}
+	.cartlists-table {
+		font-size: 16px;
+		line-height: 24px;
+		border-top: 6px solid $brand-color;
+		tr {
+			border-bottom: 1px solid #ddd;
+		}
+		th, td {
+			padding: 10px;
+			text-align: center;
+		}
+		th.p-img , td.p-img {
+			display: none;
+			@include desktop-991 {
+				display: table-cell;
+				text-align: center;
+			}
+		}
+		th {
+			font-weight: bold;
+			color: #fff;
+			background: #555;
+		}
+		td {
+			&.p-remove, &.p-price, &.p-total {
+				background: #f7f7f7;
+			}
+			&.p-name, &.p-quantity {
+				background: #fff;
+			}
+			@include desktop-991 {
+				&.p-remove, &.p-name, &.p-quantity {
+					background: #f7f7f7;
+				}
+				&.p-img, &.p-price, &.p-total {
+					background: #fff;
+				}
+			}
+			&.p-remove {
+				width: 55px;
+				> a {
+					&:active {
+						@extend %active;;
+					}
+					> i {
+						font-size: 20px;
+					}
+				}
+			}
+			&.p-img {
+				width: 100px;
+			}
+			&.p-name {
+				font-weight: bold;
+				font-size: 14px;
+				a {
+					color: #666;
+					&:hover {
+						color: #444;
+					}
+					&:active {
+						@extend %active;
+						color: #222;
+					}
+				}
+			}
+			&.p-price {
+				width: 125px;
+				del {
+					@extend %w-100;
+					@extend %float-l;
+					color: #bbb;
+					font-size: 12px;
+				}
+				ins {
+					@extend %w-100;
+					@extend %float-l;
+					@extend %tdeco-none;
+					color: $brand-color;
+					font-size: 16px;
+					font-weight: 500;
+				}
+			}
+			&.p-quantity {
+				width: 105px;
+				.text_box {
+					width: 30px;
+					text-align: center;
+				}
+			}
+			&.p-total {
+				width: 130px;
+				font-weight: bold;
+				color: #222;
+			}
+		}
+		> tbody > tr {
+			height: auto!important;
+		}
+	}
+	.confirm-form {
+		@extend %w-100;
+		@extend %clearfix;
+		border-top: 6px solid $brand-color;
+		border-bottom: 1px solid #ddd;
+		padding: 15px 0;
+		.order-data,
+		.confirm-data {
+			@extend %w-100;
+			@extend %clearfix;
+			padding: 15px;
+			label, input, .data-sex {
+				@extend %float-l;
+				font-size: 16px;
+				line-height: 24px;
+			}
+			> label {
+				width: 100px;
+				font-weight: normal;
+				@include pad {
+					padding-top: 10px;
+				}
+			}
+			> input {
+				@extend %w-100;
+				@extend %trans-all-02;
+				border: 1px solid #ddd;
+				background: #f5f5f5;
+				padding: 10px;
+				@include pad {
+					width: 50%;
+				}
+				&:focus {
+					border: 1px solid $brand-color;
+					background: #fff;
+				}
+			}
+			> input[type="radio"] {
+				width: 30px;
+				@include pad {
+					width: 60px;
+				}
+			}
+			.delivery-time {
+				@extend %w-100;
+				@extend %trans-all-02;
+				@extend %form-select;
+				border: 1px solid #ddd;
+				font-size: 16px;
+				padding: 10px;
+				@include pad {
+					width: 50%;
+				}
+			}
+			.payment-icon {
+				width: 100px;
+			}
+			.radio-label {
+				width: auto;
+				padding-top: 0;
+				margin-right: 15px;
+				cursor: pointer;
+			}
+			.radio-label-info {
+				@extend %float-l;
+				width: 90%;
+				padding-left: 30px;
+				padding-bottom: 20px;
+				color: $loader-color;
+				border-bottom: 1px dashed #ddd;
+				@include pad {
+					padding-left: 60px;
+				}
+			}
+			.required {
+				color: #f00;
+				margin-right: 5px;
+			}
+			.data-sex {
+				margin-left: 0;
+				margin-top: 10px;
+				> label {
+					width: 60px;
+					> input {
+						margin-right: 5px;
+					}
+				}
+				@include pad {
+					margin-left: 15px;
+					margin-top: 0;
+					padding-top: 10px;
+				}
+			}
+		}
+		.order-data .credit {
+			@extend %form-select;
+			border: 1px solid #ddd;
+			font-size: 16px;
+			padding: 0 10px;
+			margin-top: 10px;
+			@include phone-400 {
+				margin-top: 0;
+			}
+		}
+		.order-data:last-child > .radio-label-info {
+			border: none;
+			padding-bottom: 0;
+		}
+		.confirm-data {
+			color: #333;
+			label {
+				width: 100%;
+				@include pad {
+					width: 100px;
+				}
+			}
+			.confirm-info {
+				font-size: 16px;
+				width: 100%;
+				@include pad {
+					width: 50%;
+				}
+			}
+		}
+	}
+	.btn-process {
+		@extend %btn-square;
+		padding: 10px 25px;
+		font-weight: bold;
+	}
+	.btn-prev {
+		background: #666;
+	    &:hover {
+	    @extend %tdeco-none;
+	      background: #444;
+	    }
+	    &:active {
+	      background: #222;
+	    }
+	}
+}

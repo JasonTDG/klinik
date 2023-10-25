@@ -1,0 +1,93 @@
+//Page - Shopping Cart
+.shopping-cart {
+	
+}
+
+.title-process {
+	@extend %clearfix;
+	color: $brand-color;
+	margin-bottom: 20px;
+	&.steps {
+		@include border-radius(30px);
+		background: #eee;	
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+	span {
+		@include inline-block;
+		@include border-radius(50%);
+		color: #fff;
+		background: $brand-color;
+		font-size: 16px;
+		padding: 4px 11px;
+		margin-right: 15px;
+	}
+	.shopping-step-group {
+		@extend %clearfix;
+		overflow: hidden;
+	}
+	.shopping-step {
+		@extend %clearfix;
+		@extend %float-l;
+		@extend %w-100;
+		background: #eee;
+		position: relative;
+		padding: 10px 30px 10px 10px;
+		font-size: 16px;
+		font-weight: bold;
+		@include desktop-1024 {
+			&:after {
+				@include transform(rotate(45deg));
+				width: 46px;
+				height: 46px;
+				display: block;
+				content: '';
+				background: #eee;
+				border-top: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				position: absolute;
+				right: -23px;
+				top: 2px;
+				z-index: 99;
+			}
+			&.active:after {
+				background: $brand-color;
+				border-color: $a-color-hover;
+			}
+		}
+		@include desktop-1024 {
+			width: auto;
+		}
+		&.active {
+			background: $brand-color;
+			color: #fff;
+			span {
+				background: #fff;
+				color: $brand-color;
+			}
+		}
+		&.step1 {
+			@include border-top-radius(25px);
+			padding-left: 25px;
+			@include desktop-1024 {
+				@include border-top-right-radius(0);
+				@include border-bottom-left-radius(25px);
+				padding-left: 35px;
+			}
+			@include desktop-1280 {
+				padding-left: 120px;
+			}
+		}
+		&.step2, &.step3, &.step4 {
+			padding-left: 25px;
+			padding-right: 10px;
+			@include desktop-1024 {
+				padding-left: 50px;
+				padding-right: 30px;
+			}
+		}
+		&.step4:after {
+			display: none;
+		}
+	}
+}

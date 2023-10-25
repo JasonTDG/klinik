@@ -1,0 +1,160 @@
+//* Button Settings ------------------------------------ */
+a {
+	cursor: pointer;
+	text-decoration: none;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}
+
+.btn-primary {
+	background: $btn-bg;
+	border-color: $btn-bd;
+	letter-spacing: 1px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+	background: $btn-bg-hover;
+	border-color: $btn-bd-hover;
+}
+
+.btn-prev {
+	background: #666;
+    &:hover {
+    @extend %tdeco-none;
+      background: #444;
+    }
+    &:active {
+      background: #222;
+    }
+}
+
+.item-info-btn {
+	@extend %trans-all-02;
+	@extend %btn-ghost;
+	@extend %btn-hover-effects-slidein;
+	@include border-radius(3px);
+	padding: 4px 24px;
+	span {
+		@extend %w-100;
+		@extend %dis-bk;
+		@include transition(transform,.3s);
+		text-align: center;
+		vertical-align: 4px;
+	}
+	i {
+		@extend %h-100;
+		@extend %dis-inb;
+		@include transform(scale(0.5));
+		position: absolute;
+		font-size: 18px;
+		width: 20px;
+		right: 30px;
+		top: 0;
+		line-height: 30px;
+		text-align: right;
+		opacity: 0;
+		-webkit-transition: all .3s cubic-bezier(0.175,0.885,0.320,1.15);
+		-moz-transition: all .3s cubic-bezier(0.175,0.885,0.320,1.15);
+		-o-transition: all .3s cubic-bezier(0.175,0.885,0.320,1.15);
+		transition: all .3s cubic-bezier(0.175,0.885,0.320,1.15);
+	}
+	&:hover span {
+		@include transform(translateX(-12px));
+	}
+	&:hover i {
+		@include transform(scale(1));
+		right: 0;
+		opacity: 1;
+	}
+}
+.item-more-btn,
+.item-addtocart-btn,
+.item-inquiry-btn {
+	@extend %btn-ghost;
+	@extend %btn-hover-effects-slidein;
+	@extend %font-icon;
+	@include border-radius(3px);
+	padding: 4px 8px;
+	margin-right: 3px;
+	border: 1px solid #444;
+  	color: #444;
+	&::before {
+		background: #222;
+	}
+	&:hover {
+		background: #444;
+	}
+	&:active {
+		background: #222;
+	}
+}
+.item-inquiry-btn {
+	i {
+		margin-right: 0;
+	}
+	&.active {
+		background: #444;
+		color: #fff;
+		display: none;
+	}
+}
+.item-info-btn {
+	i {
+		margin-right: .5em;
+	}
+}
+
+.specs-addtocart-btn {
+	@extend %btn-square;
+	margin-right: 3px;
+}
+
+.news-pagination,
+.downloads-pagination {
+	.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+		background: $a-color;
+		border-color: $a-color;
+		color: #fff;
+	}
+	.pagination > li > a, .pagination > li > span {
+		color: $a-color;
+	}
+}
+
+#back-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	display: block;
+	z-index: 9999999999;
+	a {
+		display: block;
+		font-size: 3.5em;
+		text: { 
+			align: center;
+			decoration: none;
+		}
+		@extend %trans-all-02;
+		i {
+			display: block;
+			color: $a-color-hover;
+			opacity: .7;
+			@extend %trans-all-02;
+		}
+		&:hover {
+			i {
+				color: $a-color-active;
+				opacity: .8;
+			}
+		}
+		&:active {
+			@extend %active;
+			i {
+				color: $a-color-active;
+				opacity: 1;
+			}
+		}
+	}
+}

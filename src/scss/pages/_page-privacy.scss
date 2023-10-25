@@ -1,0 +1,34 @@
+//Page - Privacy
+.privacy-content {
+	margin: 30px 0;
+}
+
+.privacy-list {
+	width: 90%;
+	margin: 0 auto;
+	> li {
+		@extend %p-content;
+		list-style-type: upper-roman;
+		margin-bottom: 25px;
+		> span {
+			font-weight: bold;
+		}
+		> p {
+			padding-left: 20px;
+		}
+		> ol > li {
+			list-style-type: decimal;
+			padding-left: 20px;
+			> ul > li {
+				list-style-type: disc;
+				padding-left: 20px;
+			}
+			> ul > li > p {
+				padding-left: 20px;
+			}
+		}
+	}
+	li {
+		list-style-position: inside;
+	}
+}

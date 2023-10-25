@@ -1,0 +1,208 @@
+//Page - Products Lists
+.products-category {
+	@extend %clearfix;
+	@extend %w-100;
+	ul {
+		@extend %clearfix;
+		@extend %w-100;
+		margin: 15px 0;
+		text-align: center;
+		li {
+			@extend %dis-inb;
+			margin: 5px;
+			line-height: 2.5em;
+			a {
+				@extend %btn-ghost;
+				font-size: 15px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&.active > a {
+				background: $a-color;
+				color: #fff;
+				font-weight: bold;
+			}
+		}
+	}
+	.products-category-menu {
+		@extend %clearfix;
+		@extend %w-100;
+		background: #f5f5f5;
+		margin-bottom: 20px;
+	}
+	.products-category-items {
+		@extend %clearfix;
+		@extend %maxw-100;
+		margin-bottom: 30px;
+		padding: 0;
+		@include phone-640 {
+			max-width: 90%!important;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+.category-item {
+	@extend %clearfix;
+	@extend %trans-eio-03;
+	margin: 20px 0;
+	@include phone-640 {
+		width: 50%;
+		float: left;
+	}
+	@include desktop-991 {
+		width: 33.3333333333%;
+	}
+	.category-item-inner {
+		@extend %clearfix;
+		@extend %trans-all-02;
+		@include border-radius(5px);
+		padding: 15px 15px 35px 15px;
+		border: 1px solid #fff;
+		&:hover {
+			border: 1px solid #e5e5e5;
+		}
+	}
+	.category-item-photo {
+		@extend %clearfix;
+		text-align: center;
+		> a {
+			@extend %dis-inb;
+			@extend %trans-eio-03;
+			position: relative;
+			overflow: hidden;
+			img {
+				@extend %trans-eio-03;
+				@include transform(scale(1));
+				opacity: 1;
+			}
+			.item-photo-hover {
+				@extend %w-100;
+				@extend %h-100;
+				@extend %trans-eio-03;
+				position: absolute;
+				overflow: hidden;
+				background: $itemColor;
+				opacity: 0;
+				z-index: 1;
+				h5 {
+					@include single-text-shadow;
+					color: #fff;
+					font-weight: normal;
+					letter-spacing: 3px;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -10px;
+					margin-left: -55px;
+					&::after {
+						@extend %w-100;
+						@extend %trans-eio-03;
+						@include transform(translate3d(0,40px,0));
+						height: 1px;
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 0;
+						background: #fff;
+						margin-top: 10px;
+						opacity: 0;
+					}
+					i {
+						margin-right: 6px;
+					}
+				}
+				&::before {
+					@extend %trans-eio-03;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 200px;
+					height: 200px;
+					border: 1px solid $brand-color;
+					background: $itemColor2;
+					content: '';
+					opacity: 0;
+					-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+					transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+					-webkit-transform-origin: 50%;
+					transform-origin: 50%;
+				}
+			}
+			&:hover {
+				img {
+					@include transform(scale(1.13));
+					opacity: .8;
+				}
+				.item-photo-hover {
+					opacity: 1;
+					&::before {
+						opacity: 1;
+						-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+						transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+					}
+					h5::after {
+						@include transform(translate3d(0,0,0));
+						opacity: 1;
+					}
+				}
+			}
+			&:active {
+				.item-photo-hover h5 {
+					margin-top: -8px;
+				}
+			}
+		}
+	}
+	.category-item-info {
+		@extend %clearfix;
+		@extend %w-100;
+		max-width: 640px;
+		padding: 0 15px;
+		margin: 0 auto;
+		.item-info-title {
+			color: #333;
+			padding: 15px 0;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #ddd;
+		}
+		.item-info-intro {
+			margin-bottom: 20px;
+			line-height: 1.6em;
+		}
+		.item-info-price {
+			@extend %clearfix;
+			@extend %w-100;
+			margin-bottom: 20px;
+			del {
+				color: #bbb;
+				margin-right: 5px;
+			}
+			ins {
+				@extend %tdeco-none;
+				font-size: 1rem;
+				font-weight: 500;
+				color: $brand-color;
+			}
+		}
+		.item-more-btn {
+			margin-right: 3px;
+		}
+	}
+}
+
+.section-title-group .search-keywords,
+.section-title-group .search-keywords-numbers {
+	padding: 0 8px;
+	font-weight: bold;
+}
+
+.section-title-group .search-keywords {
+	color: $brand-color;
+}
+
+.section-title-group .search-keywords-numbers {
+	color: $alert;
+}

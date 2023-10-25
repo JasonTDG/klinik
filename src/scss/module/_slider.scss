@@ -1,0 +1,130 @@
+// Slider, Carousel
+.carousel-indicators {
+	li {
+		width: 12px;
+		height: 12px;
+		border: 2px solid #fff;
+		&.active {
+			background-color: $brand-color;
+		}
+	}
+}
+.carousel-inner .item a {
+	display: block;
+}
+.carousel-caption {
+	@include single-text-shadow;
+	text-align: left;
+	left: 6%;
+	right: 0;
+	bottom: 0;
+	padding: 0;
+	@include pad {
+	    left: 10%;
+		right: 40%;
+		padding-bottom: 30px;
+	}
+	@include desktop-1199 {
+	    left: 10%;
+		right: 60%;
+		padding-bottom: 3%;
+	}
+	h1 {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 10px 20px;
+		@include phone-480 {
+			font-size: 1.3rem;
+		}
+		@include pad {
+		    font-size: 1.5rem;
+		}
+		@include desktop-991 {
+		    font-size: 1.75rem;
+		}
+	}
+	p {
+		@include pad {
+		    font-size: 0.8rem;
+		    line-height: 1.3rem;
+		    padding-left: 15px;
+		}
+		@include desktop-991 {
+		    font-size: 1rem;
+		    line-height: 1.5rem;
+		}
+	}
+}
+
+//Desktop Index Banner
+#myCarousel .carousel-caption {
+	h1 {
+		display: none;
+		@include phone-480 {
+		    display: inline-block;
+		}
+	}
+	p {
+		display: none;
+		@include pad {
+		    display: block;
+		    width: 50%;
+		}
+	}
+}
+
+//Mobile-Devices Index Banner
+#mobileCarousel {
+	position: relative;
+	.owl-controls {
+		@extend %w-100;
+		position: absolute;
+		top: 40%;
+		.owl-buttons {
+			display: block;
+			div {
+				position: absolute;
+				background: none;
+				padding: 36px 18px;
+				&.owl-prev {
+					left: 0;
+				}
+				&.owl-next {
+					right: 0;
+				}
+				&.owl-prev:before, &.owl-next:before {
+					@include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+					font-size: 45px;
+				}
+			}
+		}
+		.owl-pagination {
+			display: none;
+		}
+	}
+	.owl-item a {
+		@extend %dis-bk;
+	}
+	.carousel-caption {
+		bottom: 0px;
+    	left: 0%;
+		@include phone-480 {
+			left: 0%;
+		}
+		h1 {
+			@extend %dis-inb;
+			display: block;
+			text-align: center;
+		}
+		p {
+			display: none;
+			@include phone-480 {
+			    display: inline-block;
+			    width: 95%;
+			}
+			@include pad {
+				font-size: 1rem;
+ 				line-height: 1.8em;
+			}
+		}
+	}
+}

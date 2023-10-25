@@ -1,0 +1,65 @@
+body {
+	min-width: 299px;
+}
+
+p {
+	@extend %p-content;
+}
+
+.container.full-width {
+	width: auto;
+	max-width: 90%;
+}
+
+.container, .container.full-width  {
+	@include desktop-1440 {
+	    max-width: 85%;
+	}
+	@include desktop-1920 {
+	    max-width: 80%;
+	}
+}
+
+.main-content {
+	@extend %clearfix;
+	@extend %w-100;
+	min-height: 100vh;
+}
+
+.page-content-section {
+	@extend %clearfix;
+	@extend %w-100;
+}
+
+.section-title-group {
+	@extend %clearfix;
+	@extend %w-100;
+	padding: 20px 0;
+	text-align: center;
+}
+.section-title-group h1 {
+	@extend %dis-inb;
+	@extend %trans-all-02;
+	@extend %title-mid-line;
+	margin-bottom: 20px;
+	span {
+		&:before, &:after {
+			@include phone-480 {
+				width: 4em;
+			}
+			@include pad {
+				width: 8em;
+			}
+			@include desktop-991 {
+				width: 8em;
+			}
+			@include desktop-1199 {
+				width: 10em;
+			}
+		}
+	}
+}
+.section-title-group p {
+	margin-bottom: 20px;
+	text-align: center;
+}

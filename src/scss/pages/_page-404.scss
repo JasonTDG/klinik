@@ -1,0 +1,70 @@
+//Page - 404
+.error-page {
+	background: url(../images/common/bg-404.jpg) 0 0 no-repeat;
+	min-height: 100vh;
+	.error-section {
+		@extend %clearfix;
+		@extend %p-content;
+		margin: 30px 0;
+	}
+	.error-warning {
+		padding-bottom: 20px;
+		margin-bottom: 50px;
+		border-bottom: 1px dashed #ccc;
+		@include desktop-991 {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+	.error-title {
+		line-height: 1.8em;
+		text-align: center;
+		i {
+			@extend %trans-all-02;
+			color: $brand-color;
+			font-size: 2.5em;
+			margin-bottom: .5em;
+		}
+		&:hover i {
+			color: $a-color-hover;
+		}
+	}
+	.error-solutions {
+		h5 {
+			color: $brand-color;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #ccc;
+			i {
+				font-size: 19px;
+				margin-right: 1em;
+			}
+		}
+		ul {
+			@extend %clearfix;
+			padding-left: 24px;
+			li {
+				@extend %w-100;
+				@extend %dis-inb;
+				@extend %float-l;
+			}
+			.error-links {
+				@extend %dis-bk;
+				padding: 10px;
+				border-bottom: 1px dashed #fff;
+				background: rgba(255,255,255,0);
+				i {
+					font-size: 17px;
+					margin-right: 1em;
+				}
+				&:hover {
+					background: rgba(255,255,255,0.5);
+				}
+				&:active {
+					@extend %active;
+					background: rgba(255,255,255,0.9);
+				}
+			}
+		}
+	}
+}

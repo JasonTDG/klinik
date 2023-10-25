@@ -1,0 +1,69 @@
+//* Color Settings ------------------------------------ */
+$brand-color: #1D2088;
+$a-color: #005195;
+$a-color-hover: #002f57;
+$a-color-active: #001527;
+$btn-bg: #005195;
+$btn-bg-hover: #003e73;
+$btn-bd: #004178;
+$btn-bd-hover: #002f57;
+$text-color: #666;
+$loader-color: #1e82d6;
+$news-date: #006ae2;
+$alert: #d50000;
+
+$Fenlv:#d1ffe0;
+$White:#fff;
+$itemColor:rgba($news-date, 0.7);
+$itemColor2:rgba($btn-bd-hover, 0.7);
+
+//Text-Shadow Settings
+$default-text-shadow-color: rgba(black, 0.8);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-h-offset: 1px;
+
+//Box-Shadow Settings
+$default-box-shadow-color: rgba(black, 0.2);
+$default-box-shadow-blur: 3px;
+$default-box-shadow-v-offset: 1px;
+$default-box-shadow-h-offset: 1px;
+
+body {
+	background: #fff;
+	color: $text-color;
+}
+::selection {
+	color: #fff;
+	background: $brand-color;
+}
+::-moz-selection {
+	color: #fff;
+	background: $brand-color;
+}
+// ::-webkit-input-placeholder {
+// 	color: #000;
+// }
+// :-moz-placeholder {
+// 	color: #000;
+// 	opacity: 1;
+// }
+// ::-moz-placeholder {
+// 	color: #000;
+// 	opacity: 1;
+// }
+// :-ms-input-placeholder {
+// 	color: #000;
+// }
+
+a {
+	color: $a-color;
+	text-decoration: none;
+	@include transition (all .3s);
+	&:hover {
+		color: $a-color-hover;
+	}
+	&:active {
+		color: $a-color-active;
+	}
+}

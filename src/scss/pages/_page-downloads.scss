@@ -1,0 +1,25 @@
+//Page - FAQ
+.downloads-lists {
+	@extend %accordion;
+	.downloads-pagination {
+		text-align: center;
+	}
+	.table {
+		tr > td {
+			padding-left: 15px;
+		}
+		.th-title {
+			width: 20%;
+			min-width: 50px;
+			text-align: center;
+		}
+		.downloads-link {
+			@extend %btn-ghost;
+			padding: 5px 10px;
+		}
+	}
+}
+
+.table-hover > tbody > tr {
+	@extend %trans-all-02;
+}

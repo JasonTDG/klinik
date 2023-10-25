@@ -1,0 +1,77 @@
+//Page - News Lists & News Details
+.news-lists {
+	margin: 30px 0;
+	.news-item-text-wrapper {
+		display: block!important;
+		max-width: 640px!important;
+	}
+}
+
+.news-pagination {
+	text-align: center;
+}
+
+.news-item {
+	@extend %clearfix;
+	@extend %w-100;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	border-bottom: 1px dashed #ccc;
+	&-img {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	&-text {
+		@extend %dis-bk;
+		text-align: center;
+		@include desktop-991 {
+			display: table;
+			vertical-align: middle;
+		}
+		.news-item-text-wrapper {
+			@extend %dis-inb;
+			max-width: 640px;
+			float: none;
+			margin: 0 auto;
+			text-align: left;
+			@include desktop-991 {
+				display: table-cell;
+				vertical-align: middle;
+				max-width: none;
+			}
+		}
+		h5 {
+			color: $brand-color;
+		}
+		.date {
+			@extend %font-icon;
+			padding-left: 2px;
+		}
+		.news-content {
+			margin-top: 20px;
+			margin-bottom: 25px;
+		}
+		.news-more-details {
+			@extend %btn-ghost;
+			padding: 5px 20px;
+		}
+	}
+}
+
+.news-item.details {
+	border: none;
+	.news-item-img {
+		margin-bottom: 30px;
+		> img {
+			max-width: 640px;
+		}
+	}
+	.news-item-text .news-content {
+		padding-bottom: 25px;
+		border-bottom: 1px dashed #ccc;
+	}
+}
+
+.news-pagination .pagination > li > a {
+	padding: 6px 12px;
+}

@@ -1,0 +1,111 @@
+//Page - About Us
+.page-aboutus {
+	margin: 0;
+	&:nth-child(even) {
+		background: #f3f3f3;
+	}
+	&:first-child {
+		margin: 30px 0;
+	}
+	&:last-child {
+		// margin-bottom: 30px;
+		padding-bottom:30px;
+		padding-top:30px;
+	}
+	@include desktop-991 {
+		&:nth-child(odd) .aboutus-company-img {
+			float: right;
+		}
+	}
+}
+.page-aboutus-contact {
+	 margin-top: 30px;
+
+	text-align: center;
+	.aboutus-contact-info {
+		@extend %title-mid-line;
+		font-size: 18px;
+		font-style: oblique;
+		padding-bottom: 0;
+		margin-bottom: 15px;
+		letter-spacing: 1px;
+		text-align: center;
+		span:before, span:after {
+			display: none;
+			@include phone-480 {
+				display: block;
+				width: 4em;
+			}
+			@include pad {
+				width: 8em;
+			}
+			@include desktop-991 {
+				width: 10em;
+			}
+			@include desktop-1199 {
+				width: 12em;
+			}
+		}
+	}
+	.aboutus-contact-btn {
+		@extend %btn-ghost;
+		@include border-radius(3px);
+		border: 1px solid $a-color;
+		color: $a-color;
+		padding: 10px 25px;
+		&:hover {
+			 border: 1px solid $a-color;
+		}
+		&:active {
+			 border: 1px solid $a-color-hover;
+		}
+		i {@extend %font-icon;}
+	}
+}
+.aboutus-slogan {
+	@extend %clearfix;
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	> h2 {
+		@extend %trans-eio-03;
+		@extend %title-mid-line;
+		font-style: oblique;
+		margin-bottom: 20px;
+		color: $a-color;
+		&:hover {
+			color: $a-color-hover;
+		}
+		i {
+			@extend %font-icon;
+		}
+		span:before, span:after {
+			width: 2em;
+			@include phone-480 {
+				width: 4em;
+			}
+			@include pad {
+				width: 8em;
+			}
+			@include desktop-991 {
+				width: 10em;
+			}
+			@include desktop-1199 {
+				width: 12em;
+			}
+		}
+	}
+	> p {
+		text-align: center;
+	}
+}
+.aboutus-company-img {
+	text-align: center;
+}
+.aboutus-company-intro {
+	padding: 30px 15px;
+	> h4 {
+		@extend %font-icon;
+		margin-bottom: 20px;
+	}
+}

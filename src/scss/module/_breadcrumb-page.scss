@@ -1,0 +1,43 @@
+// Page Breadcrumb
+.page-breadcrumb {
+	@extend %clearfix;
+	ul {
+		@extend %clearfix;
+		margin-bottom: 0;
+		@include desktop-991 {
+			text-align: right;
+			float: right;
+			margin-top: 25px;
+		}
+		li {
+			@extend %float-l;
+			@include single-text-shadow;
+			line-height: 1.8em;
+			font-weight: bold;
+			color: #fff;
+			@include desktop-991 {
+				line-height: 1.6em;
+			}
+			a {
+				@extend %dis-inb;
+				color: #fff;
+				padding-right: 8px;
+				font-size: 15px;
+				&:hover {
+					color: #eee;
+				}
+				&:active {
+					@extend %active;
+					color: #ddd;
+				}
+			}
+		}
+		> li + li:before {
+			@include single-text-shadow;
+			content: "\f105";
+			font-family: 'FontAwesome';
+			color: #fff;
+			padding-right: 8px;
+		}
+	}
+}

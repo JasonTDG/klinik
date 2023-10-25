@@ -1,0 +1,9 @@
+//Page - Confirm
+.confirm {
+	@include pad {
+		.confirm-form .order-data > label,
+		.confirm-form .confirm-data > label {
+			padding-top: 0;
+		}
+	}
+}

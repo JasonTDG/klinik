@@ -1,0 +1,22 @@
+// Page Banner
+.page-banner {
+	@extend %clearfix;
+	@extend %w-100;
+	padding: 30px 0;
+	.page-title {
+		@extend %clearfix;
+		h1 {
+			@extend %dis-inb;
+			@include single-text-shadow;
+			color: #fff;
+			background: rgba(0, 0, 0, 0.5);
+			padding: 10px 20px;
+			margin: 10px 0;
+		}
+	}
+	.container {
+		@include desktop-1199 {
+			width: 90%;
+		}
+	}
+}

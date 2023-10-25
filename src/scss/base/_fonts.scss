@@ -1,0 +1,111 @@
+// Typography Settings ------------------------------------
+$fonts: Roboto, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei", "新細明體";
+$fz: 14px;
+
+body {
+	font: {
+		family: $fonts;
+		size: $fz; 
+	}
+	vertical-align: baseline;
+	h1, h2, h3, h4, h5, h6 {font-weight: bold;}
+	h1 {font-size: $fz + 14px;}
+	h2 {font-size: $fz + 12px;}
+	h3 {font-size: $fz + 10px;}
+	h4 {font-size: $fz + 6px;}
+	h5 {font-size: $fz + 4px;}
+	h6 {font-size: $fz + 2px;}
+}
+@include establish-baseline;
+
+@font-face {
+	font: {
+		family: 'Roboto';
+		style: normal;
+		weight: 100;
+	}
+  	src: local('Roboto Thin'), local('Roboto-Thin'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: normal;
+		weight: 300;
+	}
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: normal;
+		weight: 400;
+	}
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: normal;
+		weight: 500;
+	}
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: normal;
+		weight: 700;
+	}
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+	font: {
+		family: 'Roboto';
+		style: italic;
+		weight: 100;
+	}
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/12mE4jfMSBTmg-81EiS-YRsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: italic;
+		weight: 300;
+	}
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/7m8l7TlFO-S3VkhHuR0at4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: italic;
+		weight: 400;
+	}
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/1pO9eUAp8pSF8VnRTP3xnvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: italic;
+		weight: 500;
+	}
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/OLffGBTaF0XFOW1gnuHF0YbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font: {
+		family: 'Roboto';
+		style: italic;
+		weight: 700;
+	}
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/t6Nd4cfPRhZP44Q5QAjcC4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('../fonts/flexslider-icon.eot');
+	src:url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/flexslider-icon.woff') format('woff'),
+		url('../fonts/flexslider-icon.ttf') format('truetype'),
+		url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
