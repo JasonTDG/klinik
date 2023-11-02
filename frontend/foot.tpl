@@ -1,11 +1,14 @@
 <footer>
-  <div class="container full-width">
+  <div class="container">
       <div class="col-md-9">
           <p class="copyright">COPYRIGHT &copy; {#$company.subject.company#} All rights reserved.</p>
       </div>
       <div class="col-md-3 copyright-links">
       </div>
   </div>
+  <div id="preloader">
+		<img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" />
+	</div>
 </footer>
 
 <script>

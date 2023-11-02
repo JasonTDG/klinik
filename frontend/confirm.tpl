@@ -9,12 +9,6 @@
     {#include file=$__TV|cat:'meta.tpl'#}
   </head>
   <body>
-  	<div id="preloader">
-  	  <div id="status">
-  	    <div class="loader-squares"><img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" /></div>
-  	    <div class="loading-text">Loading ...</div>
-  	  </div>
-  	</div>
     <!-- Container -->
     <div id="container">
       <!-- Header -->
@@ -23,7 +17,7 @@
       <!-- Content -->
       <div id="content">
         <!-- Banner -->
-        <div class="page-banner" style="background-color: transparent; background: url({#$__R#}/{#$__V#}/images/banner/page-banner-products.jpg) 50% 50% no-repeat; background-size: cover; background-attachment: fixed;">
+        <div class="page-banner">
           <div class="container">
             <div class="page-title col-md-6">
               <h1>購買明細確認</h1>

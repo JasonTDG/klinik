@@ -81,13 +81,15 @@ a {
 	border: 1px solid #444;
   	color: #444;
 	&::before {
-		background: #222;
+		background: $a-color-active;
 	}
 	&:hover {
-		background: #444;
+		background: $a-color-hover;
+		border-color: $a-color-hover;
 	}
 	&:active {
-		background: #222;
+		background: $a-color-active;
+		border-color: $a-color-hover;
 	}
 }
 .item-inquiry-btn {
@@ -114,12 +116,13 @@ a {
 .news-pagination,
 .downloads-pagination {
 	.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
-		background: $a-color;
-		border-color: $a-color;
+		background: $second-color;
+		border-color: $second-color;
 		color: #fff;
 	}
 	.pagination > li > a, .pagination > li > span {
-		color: $a-color;
+		color: $second-color;
+		border-color: #ddd;
 	}
 }
 
@@ -139,14 +142,13 @@ a {
 		@extend %trans-all-02;
 		i {
 			display: block;
-			color: $a-color-hover;
-			opacity: .7;
+			color: $second-color;
+			opacity: .8;
 			@extend %trans-all-02;
 		}
 		&:hover {
 			i {
-				color: $a-color-active;
-				opacity: .8;
+				opacity: .9;
 			}
 		}
 		&:active {

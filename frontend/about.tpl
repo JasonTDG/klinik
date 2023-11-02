@@ -9,12 +9,6 @@
     {#include file=$__TV|cat:'meta.tpl'#}
   </head>
   <body>
-  <div id="preloader">
-    <div id="status">
-      <div class="loader-squares"><img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" /></div>
-      <div class="loading-text">Loading ...</div>
-    </div>
-  </div>
     <!-- Container -->
     <div id="container">
       <!-- Header -->
@@ -23,7 +17,7 @@
       <!-- Content -->
       <div id="content">
         <!-- Banner -->
-        <div class="page-banner" style="background-color: transparent; background: url({#$__R#}/{#$__V#}/images/banner/page-banner-aboutus.jpg) 50% 50% no-repeat; background-size: cover; background-attachment: fixed;">
+        <div class="page-banner">
           <div class="container">
             <div class="page-title col-md-6">
               <h1>{#$actionTitle#}</h1>
@@ -55,7 +49,7 @@
               <div class="row">
              {#if $row.subject.pic1#}<div class="col-md-7 aboutus-company-img"><img src="{#$__U#}/{#$row.subject.pic1#}" alt="company-img"></div>{#/if#} 
                 <div class="col-md-5 aboutus-company-intro">
-            {#if $row.subject.subject1#}<h4><i class="fa fa-caret-square-o-right"></i>{#$row.subject.subject1#}</h4>{#/if#}
+            {#if $row.subject.subject1#}<h4>{#$row.subject.subject1#}</h4>{#/if#}
             {#if $row.subject.text1#}<p>{#$row.subject.text1|nl2br#}</p>{#/if#}
                 </div>   
               </div>
@@ -68,7 +62,7 @@
               <div class="row">
               {#if $row.subject.pic2#}<div class="col-md-7 aboutus-company-img"><img src="{#$__U#}/{#$row.subject.pic2#}" alt="company-img"></div>{#/if#} 
                 <div class="col-md-5 aboutus-company-intro">
-                {#if $row.subject.subject2#}<h4><i class="fa fa-caret-square-o-right"></i>{#$row.subject.subject2#}</h4>{#/if#}
+                {#if $row.subject.subject2#}<h4>{#$row.subject.subject2#}</h4>{#/if#}
                  {#if $row.subject.text2#}<p>{#$row.subject.text2|nl2br#}</p> {#/if#} 
                 </div>   
               </div>
@@ -81,7 +75,7 @@
               <div class="row">
              {#if $row.subject.pic3#}<div class="col-md-7 aboutus-company-img"><img src="{#$__U#}/{#$row.subject.pic3#}" alt="company-img"></div>{#/if#}
                 <div class="col-md-5 aboutus-company-intro">
-              {#if $row.subject.subject3#}<h4><i class="fa fa-caret-square-o-right"></i>{#$row.subject.subject3#}</h4>{#/if#}
+              {#if $row.subject.subject3#}<h4>{#$row.subject.subject3#}</h4>{#/if#}
               {#if $row.subject.text3#}<p>{#$row.subject.text3|nl2br#}</p>{#/if#}
                 </div>   
               </div>
@@ -94,7 +88,7 @@
               <div class="row">
               {#if $row.subject.pic4#}<div class="col-md-7 aboutus-company-img"><img src="{#$__U#}/{#$row.subject.pic4#}" alt="company-img"></div>{#/if#}
                 <div class="col-md-5 aboutus-company-intro">
-               {#if $row.subject.subject4#}<h4><i class="fa fa-caret-square-o-right"></i>{#$row.subject.subject4#}</h4>{#/if#}
+               {#if $row.subject.subject4#}<h4>{#$row.subject.subject4#}</h4>{#/if#}
                {#if $row.subject.text4#}<p>{#$row.subject.text4|nl2br#}</p>{#/if#}
                 </div>   
               </div>
@@ -107,7 +101,7 @@
               <div class="row">
              {#if $row.subject.pic5#}   <div class="col-md-7 aboutus-company-img"><img src="{#$__U#}/{#$row.subject.pic5#}" alt="company-img"></div>{#/if#}
                 <div class="col-md-5 aboutus-company-intro">
-                {#if $row.subject.subject5#}<h4><i class="fa fa-caret-square-o-right"></i>{#$row.subject.subject5#}</h4>{#/if#}
+                {#if $row.subject.subject5#}<h4>{#$row.subject.subject5#}</h4>{#/if#}
                 {#if $row.subject.text5#}<p>{#$row.subject.text5|nl2br#}</p>{#/if#}
                 </div>   
               </div>
@@ -116,8 +110,8 @@
           {#/if#}
           <section class="page-content-section page-aboutus page-aboutus-contact">
             <div class="container">
-              <p class="aboutus-contact-info"><span>Ada pertanyaan, mohon tanya langsung!</span></p>
-              <a class="aboutus-contact-btn" href="{#$__C#}/contact" title="Hubungi kami"><i class="fa fa-envelope"></i>Hubungi kami</a>
+              <p class="aboutus-contact-info"><span>Ingin berkonsultasi, buat janji dengan spesialis kami!</span></p>
+              <a class="aboutus-contact-btn" href="{#$__C#}/contact" title="Hubungi kami"><i class="fa fa-envelope"></i>Buat Janji</a>
             </div>
           </section>
         </article>

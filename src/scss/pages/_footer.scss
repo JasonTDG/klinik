@@ -2,10 +2,10 @@
 footer {
 	@extend %clearfix;
 	@extend %w-100;
-	background: #333;
+	background: $footer;
 	p.copyright {
 		font-size: 14px;
-		color: #999;
+		color: #fff;
 		text-align: left;
 		margin: 0;
 		padding: 1em 0;

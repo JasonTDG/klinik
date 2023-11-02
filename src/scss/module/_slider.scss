@@ -44,12 +44,12 @@
 	}
 	p {
 		@include pad {
-		    font-size: 0.8rem;
+		    font-size: 1rem;
 		    line-height: 1.3rem;
 		    padding-left: 15px;
 		}
 		@include desktop-991 {
-		    font-size: 1rem;
+		    font-size: 1.2rem;
 		    line-height: 1.5rem;
 		}
 	}
@@ -83,7 +83,7 @@
 			display: block;
 			div {
 				position: absolute;
-				background: none;
+				background: $brand-color;
 				padding: 36px 18px;
 				&.owl-prev {
 					left: 0;

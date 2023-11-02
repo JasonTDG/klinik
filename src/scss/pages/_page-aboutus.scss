@@ -54,10 +54,10 @@
 		color: $a-color;
 		padding: 10px 25px;
 		&:hover {
-			 border: 1px solid $a-color;
+			 border: 1px solid $a-color-hover;
 		}
 		&:active {
-			 border: 1px solid $a-color-hover;
+			 border: 1px solid $a-color-active;
 		}
 		i {@extend %font-icon;}
 	}

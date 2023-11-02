@@ -14,21 +14,21 @@
 			@include single-text-shadow;
 			line-height: 1.8em;
 			font-weight: bold;
-			color: #fff;
+			color: $a-color;
 			@include desktop-991 {
 				line-height: 1.6em;
 			}
 			a {
 				@extend %dis-inb;
-				color: #fff;
+				color: $a-color;
 				padding-right: 8px;
 				font-size: 15px;
 				&:hover {
-					color: #eee;
+					color: $a-color-hover;
 				}
 				&:active {
 					@extend %active;
-					color: #ddd;
+					color: $a-color-active;
 				}
 			}
 		}
@@ -36,7 +36,7 @@
 			@include single-text-shadow;
 			content: "\f105";
 			font-family: 'FontAwesome';
-			color: #fff;
+			color: $a-color;
 			padding-right: 8px;
 		}
 	}

@@ -17,7 +17,7 @@
       <!-- Content -->
       <div id="content">
         <!-- Banner -->
-        <div class="page-banner" style="background-color: transparent; background: url({#$__R#}/{#$__V#}/images/banner/page-banner-products.jpg) 50% 50% no-repeat; background-size: cover; background-attachment: fixed;">
+        <div class="page-banner">
           <div class="container">
             <div class="page-title col-md-6">
               <h1>Pencarian Produk</h1>
@@ -37,7 +37,7 @@
             <section class="page-content-section products-lists">
           <div class="container">
               <div class="section-title-group">
-                <h1><span><i class="fa fa-search"></i>Hasil pencarian</span></span></h1>
+                <h1><span>Hasil pencarian</span></h1>
                   <p>Kata kunci: <span class="search-keywords">{#$search#}</span>, Sebanyak informasi pena: <span class="search-keywords-numbers">{#$totals#}</span></p>
               </div>
           </div>
@@ -76,13 +76,14 @@
                   </div>
                 </div>
               {#/foreach#} 
-                            <nav class="news-pagination">
-				      <ul class="pagination">
-				        {#$links3#}
-				     </ul>
-				   </nav>
+           
                
               </div>
+               <nav class="news-pagination">
+                  <ul class="pagination">
+                    {#$links3#}
+                </ul>
+              </nav>
             </div>
         </section>
         </article>
@@ -98,12 +99,7 @@
     </div>
     <!-- end container -->
     <p id="back-top"><a href="#top" title="Kembali ke atas"><i class="fa fa-chevron-circle-up"></i></a></p>
-<div id="preloader">
-  <div id="status">
-    <div class="loader-squares"><img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" /></div>
-    <div class="loading-text">Loading ...</div>
-  </div>
-</div>
+
   </body>
 <!-- Java Script ================================================== -->
 <script type="text/javascript" src="{#$__R#}/{#$__V#}/js/jquery-1.11.2.min.js"></script>

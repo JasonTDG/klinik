@@ -11,14 +11,18 @@ p {
 	max-width: 90%;
 }
 
-.container, .container.full-width  {
-	@include desktop-1440 {
-	    max-width: 85%;
-	}
-	@include desktop-1920 {
-	    max-width: 80%;
-	}
+.container  {
+	max-width: 1140px;
 }
+
+// .container, .container.full-width  {
+// 	@include desktop-1440 {
+// 	    max-width: 85%;
+// 	}
+// 	@include desktop-1920 {
+// 	    max-width: 80%;
+// 	}
+// }
 
 .main-content {
 	@extend %clearfix;

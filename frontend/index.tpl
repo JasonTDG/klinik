@@ -9,11 +9,6 @@
     {#include file=$__TV|cat:'meta.tpl'#}
   </head>
   <body>
-    <div id="preloader">
-      <div id="status">
-        <div class="loader-squares"><img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" /></div>
-        <div class="loading-text">Loading ...</div>
-      </div>
     </div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -83,7 +78,7 @@
           <section class="home-content-section hotproducts">
             <div class="container">
                 <div class="section-title-group">
-                  <h1><span><i class="fa fa-cube" aria-hidden="true"></i>Product</span></span></h1>
+                  <h1><span>Treatment</span></h1>
                 </div>
             </div>
           </section>
@@ -111,7 +106,7 @@
           <section class="home-content-section hotnews">
             <div class="container">
                 <div class="section-title-group">
-                  <h1><span><i class="fa fa-envelope-o"></i>NEWS</span></span></h1>
+                  <h1><span>NEWS</span></h1>
                 </div>
                 <div class="row">
                 {#foreach item=n from=$news#}
@@ -134,7 +129,7 @@
           <section class="home-content-section contact-map">
             <div class="container">
               <div class="section-title-group">
-                <h1><span><i class="fa fa-paper-plane"></i>Contact Us</span></span></h1>
+                <h1><span>Contact Us</span></h1>
                 <p>{#$company.subject.address#}</p>
               </div>
             </div>
@@ -143,7 +138,7 @@
             </div>  
           </section>
           <section class="home-content-section contact-sitemap">
-            <div class="container full-width">
+            <div class="container">
               <div class="col-md-7 contact-area">
                 <div class="contact-sitemap-info">
                   <h6><i class="fa fa-info-circle"></i>{#$company.subject.company#}</h6>
@@ -166,6 +161,7 @@
                       {#if $company.subject.email#}
                       <li><i class="fa fa-envelope" title="Email"></i><p><span>E-mail：</span><a href="mailto:{#$company.subject.email#}" target="_blank">{#$company.subject.email#}</a></p></li>
                      {#/if#}
+                     <li><i class="fa fa-whatsapp" title="Whatsapp"></i><p><span>Whatsapp：</span><a href="https://wa.me/6281298682757" target="_blank">+62 81 298682757</a></p></li>
                   </ul>
                   <ul class="social-links">
                   {#if $company.subject.fb#}
@@ -183,9 +179,11 @@
                    {#if $company.subject.flickr#}    
                     <li><a href="{#$company.subject.flickr#}" target="_blank" title="Flickr"><i class="fa fa-flickr"></i></a></li>
                      {#/if#} 
+                    <li><a href="https://wa.me/6281298682757" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li> 
                   </ul>
                 </div>
               </div>
+              <!--
               <div class="col-md-4 fb-area">
                 <div class="contact-sitemap-fb">
                    {#if $company.subject.fb#}
@@ -199,6 +197,7 @@
                     {#/if#}        
                 </div>
               </div>
+              -->
             </div>
           </section>
         </article>

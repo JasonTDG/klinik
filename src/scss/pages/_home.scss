@@ -43,9 +43,10 @@
 }
 .home-content-section.hotnews {
 	background-color: transparent;
-	background: url('../images/common/bg-parallax01.jpg') 50% 50% no-repeat;
+	// background: url('../images/common/bg-parallax01.jpg') 50% 50% no-repeat;
+	background: url('../images/common/footer-bg.jpg') 50% 50% no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	a.news-link {
 		@extend %clearfix;
 		@extend %dis-inb;
@@ -111,9 +112,9 @@
 		&:hover {
 			border-color: #ddd;
 			margin-top: -5px;
-			.news-txtblock p {
-				color: #444;
-			}
+			// .news-txtblock p {
+			// 	color: #444;
+			// }
 			.news-more {
 				color: #fff;
 				background: $a-color-hover;
@@ -141,6 +142,8 @@
 }
 .home-content-section.contact-sitemap {
 	background: $brand-color;
+	// background: url('../images/common/footer-bg.jpg') no-repeat 50% 50%;
+	// background-size: cover;
 	.contact-sitemap-info {
 		@extend %clearfix;
 		@extend %w-100;
@@ -151,13 +154,13 @@
 		}
 		h6 {
 			@extend %font-icon;
-			color: #eee;
+			color: #fff;
 			padding-bottom: 15px;
 			border-bottom: 1px solid $a-color-hover;
 			margin-bottom: 20px;
 		}
 		p {
-			color: #eee;
+			color: #fff;
 			font-size: 14px;
 			text-align: left;
 		}
@@ -182,7 +185,7 @@
 			i {
 				width: 18px;
 				margin-top: 4px;
-				color: $a-color-hover;
+				color: #fff;
 				&.fa-map-marker,
 				&.fa-mobile {
 					padding-left: 3px;
@@ -197,10 +200,10 @@
 			}
 			p {
 				margin-bottom: 0;
-				color: $Fenlv;
+				color: #fff;
 			}
 			a {
-				color: $Fenlv;
+				color: #fff;
 				font-size: 14px;
 				text-align: left;
 				&:hover {

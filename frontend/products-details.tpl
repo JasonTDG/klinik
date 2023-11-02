@@ -11,12 +11,6 @@
 <meta property="og:title" content="{#$company.subject.company#} | {#$rows.subject.subject#}"/>
   </head>
   <body>
-  <div id="preloader">
-    <div id="status">
-      <div class="loader-squares"><img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" /></div>
-      <div class="loading-text">Loading ...</div>
-    </div>
-  </div>
     <!-- Container -->
     <div id="container">
       <!-- Header -->
@@ -25,7 +19,7 @@
       <!-- Content -->
       <div id="content">
         <!-- Banner -->
-        <div class="page-banner" style="background-color: transparent; background: url({#$__R#}/{#$__V#}/images/banner/page-banner-products.jpg) 50% 50% no-repeat; background-size: cover; background-attachment: fixed;">
+        <div class="page-banner">
           <div class="container">
             <div class="page-title col-md-6">
               <h1>{#$rows.subject.subject#}</h1>
@@ -190,8 +184,7 @@ new media_line_me.LineButton({"pc":false,"lang":"zh-hant","type":"a"});
                   {#/if#} 
                 </div>
               </div>
-                                </div>
-  	<div class="products-intro" role="tabpanel">
+              <div class="products-intro" role="tabpanel">
                 <ul class="nav nav-tabs" role="tablist">
                 {#if $rows.subject.tag1!=""#}
                   <li role="presentation"><a href="#tab-content-1" data-toggle="tab" role="tab"><i class="fa fa-cube"></i>{#$rows.subject.tag1#}</a></li>
@@ -419,6 +412,8 @@ new media_line_me.LineButton({"pc":false,"lang":"zh-hant","type":"a"});
       {#include file=$__TV|cat:'top_m.tpl'#}
       <!-- end Mobile Nav  -->
     </div>
+                                </div>
+  	
     <!-- end container -->
     <p id="back-top"><a href="#top" title="Kembali ke atas"><i class="fa fa-chevron-circle-up"></i></a></p>
 

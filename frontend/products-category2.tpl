@@ -9,12 +9,6 @@
   {#include file=$__TV|cat:'meta.tpl'#}
   </head>
   <body>
-    <div id="preloader">
-      <div id="status">
-        <div class="loader-squares"><img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" /></div>
-        <div class="loading-text">Loading ...</div>
-      </div>
-    </div>
     <!-- Container -->
     <div id="container">
       <!-- Header -->
@@ -23,7 +17,7 @@
       <!-- Content -->
       <div id="content">
         <!-- Banner -->
-        <div class="page-banner" style="background-color: transparent; background: url({#$__R#}/{#$__V#}/images/banner/page-banner-products.jpg) 50% 50% no-repeat; background-size: cover; background-attachment: fixed;">
+        <div class="page-banner">
           <div class="container">
             <div class="page-title col-md-6">
               <h1>{#$classB.subject.subject#}</h1>
@@ -49,7 +43,7 @@
           	<section class="page-content-section products-lists">
 			    <div class="container">
 			        <div class="section-title-group">
-			          <h1><span><i class="fa fa-trophy"></i>Pengenalan produk</span></span></h1>
+			          <h1><span>Pengenalan produk</span></h1>
 			          <p>{#$classB.content.contentA#}</p>
 			        </div>
 			    </div>
@@ -88,12 +82,13 @@
 			            </div>
 			          </div>
                     {#/foreach#}  
-			           <nav class="news-pagination">
-				      <ul class="pagination">
-				        {#$links3#}
-				     </ul>
-				   </nav>
+			      
 			        </div>
+              <nav class="news-pagination">
+                  <ul class="pagination">
+                    {#$links3#}
+                </ul>
+              </nav>
 			      </div>
 		  	</section>
         </article>

@@ -155,15 +155,15 @@
       <div class="container header-links">
         <nav class="navbar">
           <div class="logo animated fadeIn">
-            <a class="logo-pc" href="/"><img src="{#$__R#}/{#$__V#}/images/common/logo-pc.png" alt="Logo" onerror="this.onerror=null; this.src='{#$__R#}/{#$__V#}/images/common/logo-pc.png'" /></a>
-            <a class="logo-mobile" href="/"><img src="{#$__R#}/{#$__V#}/images/common/logo-mobile.png" alt="Logo" onerror="this.onerror=null; this.src='{#$__R#}/{#$__V#}/images/common/logo-mobile.png'" /></a>
+            <a class="logo-pc" href="/"><img src="{#$__R#}/{#$__V#}/images/common/logo.png" alt="Logo" onerror="this.onerror=null; this.src='{#$__R#}/{#$__V#}/images/common/logo.png'" /></a>
+            <a class="logo-mobile" href="/"><img src="{#$__R#}/{#$__V#}/images/common/logo.png" alt="Logo" onerror="this.onerror=null; this.src='{#$__R#}/{#$__V#}/images/common/logo.png'" /></a>
           </div>
            <div id="search-form" class="header-search">
             <form id="search-products" method="post" name="searchForm" action="{#$__C#}/process/ps/searchitem" onsubmit="checkform();">
               <input type="text" id="search" name="search" value="Cari produk" placeholder="Cari produk" onFocus="if (this.value == 'Cari produk') this.value = '';" onBlur="if (this.value == '') this.value = 'Cari produk';" />
             </form>
           </div> 
-          <a id="m-search-icon" title="Cari produk"><i class="fa fa-search"></i></a> 
+          
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
             {#foreach item=M from=$main_menu key=i#}
@@ -244,6 +244,7 @@
               
             </ul>
           </div>
+          <a id="m-search-icon" title="Cari produk"><i class="fa fa-search"></i></a>
         </nav>
       </div>
     </div>

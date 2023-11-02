@@ -3,10 +3,10 @@
 .menu-toggle {
 	display: block;
 	position: absolute;
-	top: 7px;
+	top: 37px;
 	left: 0;
 	@include pad {
-		top: 15px;
+		top: 52px;
 	}
 	@include desktop-991 {
 		display: none;
@@ -15,35 +15,35 @@
 #menu-toggle-btn {
 	display: block;
 	width: 24px;
-	height: 36px;
+	height: 30px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 15px;
 	z-index: 9999999999;
 	overflow: hidden;
 	cursor: pointer;
 	&::before,
 	&::after,
 	span {
-		background: $a-color;
+		background: $brand-color;
 		content: '';
 		display: block;
-		width: 20px;
-		height: 5px;
+		width: 23px;
+		height: 3px;
 		position: absolute;
 		left: 0;
 		transition: none 0.4s ease 0.4s;
 		transition-property: transform, top, bottom, left, opacity;
 	}
 	&::before {
-		top: 5px;
+		top: 6px;
 	}
 	&::after {
-		bottom: 5px;
+		bottom: 6px;
 	}
 	span {
 		top: 50%;
-		margin-top: -3px;
+    	transform: translateY(-50%);
 	}
 }
 html.mm-opening #menu-toggle-btn {

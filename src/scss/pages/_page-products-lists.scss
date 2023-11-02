@@ -34,6 +34,8 @@
 	.products-category-items {
 		@extend %clearfix;
 		@extend %maxw-100;
+		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 30px;
 		padding: 0;
 		@include phone-640 {
@@ -82,6 +84,9 @@
 				@extend %w-100;
 				@extend %h-100;
 				@extend %trans-eio-03;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				position: absolute;
 				overflow: hidden;
 				background: $itemColor;
@@ -92,11 +97,12 @@
 					color: #fff;
 					font-weight: normal;
 					letter-spacing: 3px;
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					margin-top: -10px;
-					margin-left: -55px;
+					position: relative;
+					// position: absolute;
+					// left: 50%;
+					// top: 50%;
+					// margin-top: -10px;
+					// margin-left: -55px;
 					&::after {
 						@extend %w-100;
 						@extend %trans-eio-03;
@@ -114,22 +120,22 @@
 						margin-right: 6px;
 					}
 				}
-				&::before {
-					@extend %trans-eio-03;
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					width: 200px;
-					height: 200px;
-					border: 1px solid $brand-color;
-					background: $itemColor2;
-					content: '';
-					opacity: 0;
-					-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
-					transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
-					-webkit-transform-origin: 50%;
-					transform-origin: 50%;
-				}
+				// &::before {
+				// 	@extend %trans-eio-03;
+				// 	position: absolute;
+				// 	top: 50%;
+				// 	left: 50%;
+				// 	width: 200px;
+				// 	height: 200px;
+				// 	border: 1px solid $brand-color;
+				// 	background: $itemColor2;
+				// 	content: '';
+				// 	opacity: 0;
+				// 	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+				// 	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+				// 	-webkit-transform-origin: 50%;
+				// 	transform-origin: 50%;
+				// }
 			}
 			&:hover {
 				img {
@@ -204,5 +210,5 @@
 }
 
 .section-title-group .search-keywords-numbers {
-	color: $alert;
+	color: $brand-color;
 }

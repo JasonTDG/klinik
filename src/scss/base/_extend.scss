@@ -114,11 +114,11 @@ img, %maxw-100 {
     }
     &:before {
       right: 100%;
-      margin-right: .5em;
+      margin-right: 1em;
     }
     &:after {
       left: 100%;
-      margin-left: .5em;
+      margin-left: 1em;
     }
   }
   &:hover {
@@ -420,18 +420,21 @@ img, %maxw-100 {
   overflow: hidden;
   &:hover {
     @extend %tdeco-none;
-    background: $a-color;
+    background: $a-color-hover;
+    border-color: $a-color-hover;
     color: #fff;
   }
   &:active {
     @extend %tdeco-none;
     @extend %active;
     background: $a-color-hover;
+    border-color: $a-color-hover;
     color: #fff;
   }
   &:focus {
     @extend %tdeco-none;
     background: $a-color-hover;
+    border-color: $a-color-hover;
     color: #fff;
   }
   i {
@@ -553,7 +556,7 @@ img, %maxw-100 {
       @extend %dis-inb;
       @include border-radius(32px);
       background: transparent;
-      border: 1px solid #eee;
+      border: 1px solid #fff;
       font-size: 14px;
       padding: 5px 9px;
       i {
@@ -564,10 +567,10 @@ img, %maxw-100 {
       padding: 5px 11px;
     }
     &:hover a {
-      border: 1px solid $a-color-hover;
-      background: $a-color-hover;
+      border: 1px solid #fff;
+      background: #fff;
       i {
-        color: #eee;
+        color: $brand-color;
       }
     }
     &:active a {
