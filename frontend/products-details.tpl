@@ -379,7 +379,7 @@ new media_line_me.LineButton({"pc":false,"lang":"zh-hant","type":"a"});
 			    </section>
           <section class="page-content-section relproducts-carousel">
             <div class="container full-width">
-              <h3>相關商品</h3>
+              <h3>Perawatan Lainnya</h3>
               <div id="relproducts" class="owl-carousel owl-theme">
               {#foreach item=p from=$pro#}
                 <a class="item" href="{#$__C#}/products-details/no/{#$p.node#}">
