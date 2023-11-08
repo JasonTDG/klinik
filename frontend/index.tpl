@@ -161,7 +161,9 @@
                       {#if $company.subject.email#}
                       <li><i class="fa fa-envelope" title="Email"></i><p><span>E-mail：</span><a href="mailto:{#$company.subject.email#}" target="_blank">{#$company.subject.email#}</a></p></li>
                      {#/if#}
+                     {#if $company.subject.whatsapp#}
                      <li><i class="fa fa-whatsapp" title="Whatsapp"></i><p><span>Whatsapp：</span><a href="https://wa.me/6281298682757" target="_blank">+62 81 298682757</a></p></li>
+                     {#/if#}
                   </ul>
                   <ul class="social-links">
                   {#if $company.subject.fb#}
@@ -176,10 +178,15 @@
                   {#if $company.subject.twitter#}  
                     <li><a href="{#$company.subject.twitter#}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                   {#/if#} 
+                  {#if $company.subject.instagram#}  
+                    <li><a href="{#$company.subject.instagram#}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                  {#/if#} 
                    {#if $company.subject.flickr#}    
                     <li><a href="{#$company.subject.flickr#}" target="_blank" title="Flickr"><i class="fa fa-flickr"></i></a></li>
                      {#/if#} 
-                    <li><a href="https://wa.me/6281298682757" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li> 
+                     {#if $company.subject.whatsapp#}
+                    <li><a href="{#$company.subject.whatsapp#}" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li> 
+                    {#/if#} 
                   </ul>
                 </div>
               </div>

@@ -67,3 +67,27 @@ p {
 	margin-bottom: 20px;
 	text-align: center;
 }
+
+.side-btn-box {
+	position: fixed;
+	bottom: 120px;
+    right: 24px;
+	.link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	.whatsapp {
+		background: #27D145;
+		i {
+			color: #fff;
+			font-size: 36px;
+		}
+	}
+}

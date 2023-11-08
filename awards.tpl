@@ -36,8 +36,8 @@
   			    <div class="container">
 			        <div class="row">
                 <div class="col-md-9 aboutus-slogan">
-                  <h2>Paket Diskon & Promosi </h2>
-                  <p>Nikmati perawatan kecantikan berkualitas dengan paket diskon dan promo eksklusif khusus untuk Anda</p>
+                  <h2>Kemuliaan dan penegasan kita</h2>
+                  <p>Jangan pernah mengendur, mengejar keunggulan, memenangkan penghargaan internasional</p>
                 </div>   
               </div>
   			    </div>

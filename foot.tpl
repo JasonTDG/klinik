@@ -10,13 +10,7 @@
 		<img src="{#$__R#}/{#$__V#}/images/common/logo-loading.png" />
 	</div>
 </footer>
-<div class="side-btn-box">
-	{#if $company.subject.instagram#}
-	<a class="link whatsapp" href="{#$company.subject.instagram#}" title="Whatsapp" target="_blank">
-		<i class="fa fa-whatsapp"></i>
-	</a>
-	{#/if#}
-</div>
+
 <script>
 
 function getitemcount(){
