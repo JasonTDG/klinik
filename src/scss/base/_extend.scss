@@ -556,9 +556,29 @@ img, %maxw-100 {
       @extend %dis-inb;
       @include border-radius(32px);
       background: transparent;
-      border: 1px solid #fff;
       font-size: 14px;
       padding: 5px 9px;
+      &.facebook {
+        background: #3a589b;
+      }
+      &.google-plus {
+        background: #E33729;
+      }
+      &.youtube {
+        background: #e53b51;
+      }
+      &.twitter {
+        background: #19bfe8;
+      }
+      &.instagram {
+        background: #e1306c;
+      }
+      &.flickr {
+        background: #0063DB;
+      }
+      &.whatsapp {
+        background: #27D145;
+      }
       i {
         color: #eee;
       }
@@ -567,7 +587,6 @@ img, %maxw-100 {
       padding: 5px 11px;
     }
     &:hover a {
-      border: 1px solid #fff;
       background: #fff;
       i {
         color: $brand-color;

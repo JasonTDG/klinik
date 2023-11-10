@@ -167,25 +167,25 @@
                   </ul>
                   <ul class="social-links">
                   {#if $company.subject.fb#}
-                    <li><a href="{#$company.subject.fb#}" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="link facebook" href="{#$company.subject.fb#}" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                   {#/if#}  
                   {#if $company.subject.googleplus#}  
-                    <li><a href="{#$company.subject.googleplus#}" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="link google-plus" href="{#$company.subject.googleplus#}" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
                   {#/if#}     
                   {#if $company.subject.youtube#}
-                    <li><a href="{#$company.subject.youtube#}" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                    <li><a class="link youtube" href="{#$company.subject.youtube#}" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
                     {#/if#}  
                   {#if $company.subject.twitter#}  
-                    <li><a href="{#$company.subject.twitter#}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="link twitter" href="{#$company.subject.twitter#}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                   {#/if#} 
                   {#if $company.subject.instagram#}  
-                    <li><a href="{#$company.subject.instagram#}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                    <li><a class="link instagram" href="{#$company.subject.instagram#}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                   {#/if#} 
                    {#if $company.subject.flickr#}    
-                    <li><a href="{#$company.subject.flickr#}" target="_blank" title="Flickr"><i class="fa fa-flickr"></i></a></li>
+                    <li><a  class="link flickr" href="{#$company.subject.flickr#}" target="_blank" title="Flickr"><i class="fa fa-flickr"></i></a></li>
                      {#/if#} 
                      {#if $company.subject.whatsapp#}
-                    <li><a href="{#$company.subject.whatsapp#}" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li> 
+                    <li><a class="link whatsapp" href="{#$company.subject.whatsapp#}" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li> 
                     {#/if#} 
                   </ul>
                 </div>
